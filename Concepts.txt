@@ -1,0 +1,17 @@
+npx create-react-app 01basicreact
+cd 01basicreact
+dir
+npm run start
+npm run build
+
+npm create vite@latest
+cd 01vitereact
+dir
+npm i
+npm run dev
+
+React Fibre-GitHub
+
+npm i react-router-dom
+
+

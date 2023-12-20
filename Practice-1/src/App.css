@@ -1,0 +1,49 @@
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.box {
+    background-color: black;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.box:first-child {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    height: 150px;
+}
+
+.box:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    height: 300px;
+}
+
+.box:nth-child(3) {
+    grid-column: 2/4;
+    grid-row: 2/4;
+    height: 300px;
+}
+
+.box:nth-child(4) {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    height: 148px;
+}
+
+.box:nth-child(5) {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    height: 148px;
+}
+
+.box:nth-child(6) {
+    grid-column: 1/5;
+    grid-row: 4/5;
+    height: 150px;
+}

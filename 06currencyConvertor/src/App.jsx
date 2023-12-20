@@ -46,7 +46,7 @@ function App() {
                                 selectCurrency={from}
                                 currencyOptions={options}
                                 onAmountChange={(amount) => (setAmount(amount))}
-                                onCurrencyChange={(currency) => (setTo(currency))}                                
+                                onCurrencyChange={(currency) => (setAmount(amount))}                                
                             />
                         </div>
                         <div className="relative w-full h-0.5">
@@ -62,9 +62,9 @@ function App() {
                             <InputBox
                                 label="To"
                                 amount={convertedAmount}
-                                selectCurrency={from}
+                                selectCurrency={to}
                                 currencyOptions={options}
-                                onCurrencyChange={(currency) => (setTo(currency))}
+                                onCurrencyChange={(currency) => (setConvertedAmount(amount))}
                                 amountDisabled                                
                             />
                         </div>

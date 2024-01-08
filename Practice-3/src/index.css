@@ -1,0 +1,25 @@
+.setup {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0.5rem;
+}
+
+.entry {
+    background-color: aqua;
+    grid-column: 2/4;
+    grid-row: 1/2;
+    border-radius: 0.5rem;
+    padding-top: 5%;
+    padding-left: 0.5rem;
+}
+
+.display {
+    background-color: aquamarine;
+    grid-column: 2/4;
+    grid-row: 2/6;
+    border-radius: 0.5rem;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+}

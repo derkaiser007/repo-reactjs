@@ -1,0 +1,48 @@
+.card {
+    padding: 1rem;
+    background-color: aquamarine;
+}
+
+.column {
+    border: 1rem solid crimson;
+
+    display: flex;
+
+    gap: 2rem;
+    /* width: 3000px; */
+
+    /* flex-direction: row; Default*/
+    flex-direction: column;
+}
+
+@media (min-width: 750px) {
+    .column {
+        flex-direction: row;
+    }
+}
+
+.column > * {
+    /* flex-shrink: 0; */
+    /* flex-shrink: 1; Default*/
+
+    /* flex-basis: auto; */
+    /* flex-basis: 0; */
+    /* flex-basis: 1; */
+
+    flex: 1;
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0; */
+
+    /* flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 150px; */
+
+    /* align-items: flex-start; */
+}
+
+/* Difference between flex-basis and width? */
+
+.card:nth-child(2) {
+    align-self: center;
+}

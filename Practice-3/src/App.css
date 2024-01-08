@@ -1,0 +1,41 @@
+
+
+#elementary:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#input-entry {
+    border-color: deeppink;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+#button-add {
+   border-width: 0.5rem;
+   border-radius: 0.5rem;
+   padding: 0.25rem;
+   width: 5rem;
+   font-size: 0.95rem;
+   font-weight: bold;
+}
+
+.element {
+    display: flex;
+    align-items: center;
+    border:0.05rem darkred dashed;
+    padding: 0.5rem;
+    margin: 0.25rem;
+}
+
+#button-update {
+    display: inline-flex;
+}
+
+#button-remove {
+    display: inline-flex;
+}
+
+
+

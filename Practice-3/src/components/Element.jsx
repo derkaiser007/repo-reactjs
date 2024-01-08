@@ -7,7 +7,15 @@ export default function Element({ todo }) {
     const [elementChangeBoolean, setElementChangeBoolean] = useState(false)
     const [element, setElement] = useState(todo.todo)
 
-    useEffect(() => {setElementChangeBoolean(false)}, [updateTodo])
+    const editTodo = async(e) => {
+        e.preventDefault();
+        await updateTodo({ ...todo, todo: element });        
+        setElementChangeBoolean(false);        
+    };
+
+    useEffect(() => {
+        console.log('Element Change Boolean:', elementChangeBoolean);
+    }, [elementChangeBoolean]);
 
     return(
         <>
@@ -20,10 +28,11 @@ export default function Element({ todo }) {
                 <input 
                 id="input-update"
                 type="text" 
+                size={30}
                 value={element}
                 onChange={(e) => setElement(e.target.value)}
                 />
-                <button id="button-update" onClick={() => updateTodo({...todo, todo: element})}>Update</button>
+                <button id="button-update" onClick={editTodo}>Update</button>
                 </>) 
                 : 
                 todo.todo

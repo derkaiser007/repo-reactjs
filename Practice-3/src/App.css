@@ -25,15 +25,16 @@
     border:0.05rem darkred dashed;
     padding: 0.5rem;
     margin: 0.25rem;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 #button-update {
-    display: inline-flex;
+    margin-left: 10rem;
 }
 
-#button-remove {
-    display: inline-flex;
-}
+
 
 
 

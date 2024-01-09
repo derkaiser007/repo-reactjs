@@ -1,5 +1,5 @@
 import React from "react";
-import { removeTodo, updateTodo } from "../features/todo/todoSlice";
+import { removeTodo, updateTodo } from "../redux/todo/todoSlice";
 import { useDispatch } from "react-redux";
 
 export default function TodoElement({todo}) {

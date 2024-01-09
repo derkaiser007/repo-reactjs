@@ -1,5 +1,5 @@
 import { Provider } from "react-redux"
-import { store } from './store'
+import { store } from './redux/todo/store'
 import AddTodo from './components/AddTodo'
 import TodoList from './components/TodoList'
 

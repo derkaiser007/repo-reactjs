@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import TodoContext from "../context/TodoContext";
 import '../App.css'
 
 export default function Entry() {
-    const {input, setInput, addTodo} = useContext(TodoContext)
+    const {addTodo} = useContext(TodoContext)
+    const [input, setInput] = useState('')
 
     function addTodoHandler(e) {
         e.preventDefault()

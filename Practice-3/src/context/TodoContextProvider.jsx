@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import TodoContext from "./TodoContext";
 
 export default function TodoContextProvider({ children }){
-    const [input, setInput] = useState('')
     const [todoArray, setTodoArray] = useState([])
 
     const addTodo = (input) => {
@@ -29,7 +28,7 @@ export default function TodoContextProvider({ children }){
     }, [todoArray])
 
     return(
-    <TodoContext.Provider value={{input, setInput, todoArray, addTodo, removeTodo, updateTodo}}>
+    <TodoContext.Provider value={{todoArray, addTodo, removeTodo, updateTodo}}>
         { children }
     </TodoContext.Provider>
     )

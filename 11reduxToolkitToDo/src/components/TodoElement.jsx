@@ -1,15 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { removeTodo, updateTodo } from "../redux/todo/todoSlice";
 import { useDispatch } from "react-redux";
 
 export default function TodoElement({todo}) {
     const [elementChangeBoolean, setElementChangeBoolean] = useState(false)
+    const [element, setElement] = useState(todo.text)
     const dispatch = useDispatch()
-
-    useEffect(() => {
-        setElementChangeBoolean(false);  
-        console.log('Element Change Boolean:', elementChangeBoolean);
-    }, [elementChangeBoolean]);
 
     return(
         <>
@@ -19,16 +15,20 @@ export default function TodoElement({todo}) {
             ? 
             (<>
             <input 
-            id="input-update"
             type="text" 
             size={30}
             value={element}
             onChange={(e) => setElement(e.target.value)}
             />
-            <button onClick={() => dispatch(updateTodo(todo))}>Update</button>
+            <button onClick={
+                async () => {
+                    await dispatch(updateTodo({id: todo.id, text: element}))
+                    setElementChangeBoolean(false)
+                }
+                }>Update</button>
             </>) 
             : 
-            todo.todo
+            todo.text
             }
         </div>
         <button onClick={() => dispatch(removeTodo(todo.id))}>Remove</button>

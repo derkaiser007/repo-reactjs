@@ -11,7 +11,7 @@ export default function Todo() {
     return(
         <>
         <div>
-        {todos.map((todo) => (
+        {todos.todos.map((todo) => (
             <div key={todo.id}>
                 <TodoElement todo={todo} />
             </div>

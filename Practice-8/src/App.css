@@ -11,8 +11,8 @@
     gap: 0.5rem;
 }
 
-.header-to-home:active {
-    color: aqua;
+.header-to-home {
+    color: darkolivegreen;
 }
 
 .home-to-about {

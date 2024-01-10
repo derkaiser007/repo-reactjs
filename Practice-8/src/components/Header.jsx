@@ -10,10 +10,10 @@ export default function Header() {
             <nav>
                 <ul>
                     <li>
-                        <NavLink to='' className={({isActive}) => `${isActive ? '': ''}`}>Home</NavLink>
+                        <NavLink to='' className={({isActive}) => `${isActive ? 'header-to-home': ''}`}>Home</NavLink>
                     </li>
                     <li>
-                        <Link to='/about'>About</Link>
+                        <NavLink to='/about' className={({isActive}) => `${isActive ? 'header-to-home': ''}`}>About</NavLink>
                     </li>
                 </ul>
             </nav>                

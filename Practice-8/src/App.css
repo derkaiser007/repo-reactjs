@@ -1,0 +1,24 @@
+.app-container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-row:  50px auto 100px;
+}
+
+.header-container nav ul {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+.header-to-home:active {
+    color: aqua;
+}
+
+.home-to-about {
+    border: solid 0.05rem black;
+    width: 4rem;
+    height: 2rem;
+    text-align: center;
+    text-decoration: none;
+}

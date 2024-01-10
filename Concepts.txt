@@ -12,8 +12,23 @@ npm run dev
 
 React Fibre-GitHub
 
-npm i react-router-dom
+npm install react-router-dom
 
 npm install @reduxjs/toolkit
 npm install react-redux
 
+
+
+PS C:\Users\HP I 5 6GENERATION\Desktop\repo-reactjs\07reactRouter> npm run dev
+
+> 07reactrouter@0.0.0 dev
+> vite
+
+'vite' is not recognized as an internal or external command,
+operable program or batch file.
+
+npm install vite
+scripts": {
+    "dev": "vite"
+}
+npm run dev

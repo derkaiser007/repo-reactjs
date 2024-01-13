@@ -1,15 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit'
-import infoReducer from '../features/info/infoSlice'
+import WriteAnythingRelevantToReducer from '../features/info/infoSlice'
 import {persistReducer, persistStore} from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
 
 const persistConfig = {
-    key: 'root',
+    key: 'write-anything-relevant-to-app',
     storage,
 }
 
-const persistedReducer = persistReducer(persistConfig, infoReducer)
+const persistedReducer = persistReducer(persistConfig, WriteAnythingRelevantToReducer)
 
 export const store = configureStore({
     reducer: {

@@ -15,5 +15,5 @@ export const infoSlice = createSlice({
 
 export const {setValue} = infoSlice.actions
 
-export default infoSlice.reducer;
+export default infoSlice.reducer
 

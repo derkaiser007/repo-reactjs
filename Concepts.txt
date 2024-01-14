@@ -17,7 +17,9 @@ npm install react-router-dom
 npm install @reduxjs/toolkit
 npm install react-redux
 
+npm install redux react-redux @reduxjs/toolkit redux-thunk react-router-dom
 
+npm install redux-persist
 
 PS C:\Users\HP I 5 6GENERATION\Desktop\repo-reactjs\07reactRouter> npm run dev
 

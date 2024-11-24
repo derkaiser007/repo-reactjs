@@ -44,3 +44,8 @@ npm run dev
     transform: rotate(360deg);
   }
 }
+
+
+
+npx create-react-app 00basicsofreact --template typescript
+npm create vite@latest 00basicsofreact -- --template react-ts

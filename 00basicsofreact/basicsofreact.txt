@@ -1,0 +1,55 @@
+1. Functional Component Parameters: React functional components receive a single parameter: props. Props are 
+parameters passed from parent components to child components.
+const MyComponent = ({ name, age }: { name: string; age: number }) => {
+  return (
+    <div>
+      <h1>Hello, {name}!</h1>
+      <p>Age: {age}</p>
+    </div>
+  );
+};
+
+2. Hooks Parameters:
+A) useState(initialState): Parameter: initialState (can be a primitive value, array, object, or function).
+const [items, setItems] = useState<string>("Niraj");
+const [items, setItems] = useState<string[]>([]);
+const [user, setUser] = useState({name: "John Doe", age: 25});
+###function###
+import React, { useState } from "react";
+
+const App = () => {
+  const initializeCounter = () => {
+    return 0; // Initial state
+  };
+
+  const [counter, setCounter] = useState(initializeCounter);
+
+  return (
+    <div>
+      <h1>Counter: {counter}</h1>
+      <button onClick={() => setCounter((prev) => prev + 1)}>Increment</button>
+      <button onClick={() => setCounter((prev) => prev - 1)}>Decrement</button>
+    </div>
+  );
+};
+
+export default App;
+
+B) useEffect(callback, dependencies):
+Parameters:
+callback: A function that runs after render.
+dependencies: An array of values the effect depends on.
+
+useEffect(() => {
+  callback;
+}, [dependency]);
+
+C) useMemo: useMemo is a React hook used to optimize performance by memoizing (caching) the result of a computation. 
+It ensures that a function's return value is recomputed only when its dependencies change, avoiding unnecessary 
+recalculations.
+
+const memoizedValue = useMemo(() => computeValue(a, b), [a, b]);
+**computeValue: A function that calculates the value you want to memoize.
+**[a, b]: The dependency array. The memoized value is recomputed only if one of the dependencies changes.
+**memoizedValue: The cached result of computeValue.
+
